@@ -1,0 +1,17 @@
+{
+  "name": "eenlpe1",
+  "owner": {
+    "name": "Emmanuel Enalpe",
+    "url": "https://github.com/eenlpe1"
+  },
+  "description": "Emmanuel's personal Claude Code skills for infrastructure and platform decisions.",
+  "plugins": [
+    {
+      "name": "architecture-decisions",
+      "source": "./",
+      "description": "Decision skills for AWS infrastructure (Well-Architected Framework) and CI/CD pipelines (CALMS + DORA), each ending in a recorded decision.",
+      "category": "infrastructure",
+      "keywords": ["aws", "well-architected", "devops", "ci-cd", "calms", "dora", "infrastructure", "architecture-decisions"]
+    }
+  ]
+}

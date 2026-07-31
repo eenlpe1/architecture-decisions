@@ -1,0 +1,15 @@
+{
+  "name": "architecture-decisions",
+  "version": "1.0.0",
+  "description": "Decision skills for AWS infrastructure (Well-Architected Framework) and CI/CD pipelines (CALMS + DORA), each ending in a recorded decision.",
+  "author": {
+    "name": "Emmanuel Enalpe",
+    "url": "https://github.com/eenlpe1"
+  },
+  "repository": "https://github.com/eenlpe1/architecture-decisions",
+  "keywords": ["aws", "well-architected", "devops", "ci-cd", "calms", "dora", "infrastructure"],
+  "skills": [
+    "./skills/infra-decisions",
+    "./skills/devops-decisions"
+  ]
+}
