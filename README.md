@@ -1,6 +1,6 @@
 # Architecture-Decisions
 
-Personal Claude Code skills for making and recording infrastructure decisions — AWS choices scored against the Well-Architected Framework, CI/CD choices scored against CALMS + DORA.
+Claude Code skills for making and recording infrastructure decisions — AWS choices scored against the Well-Architected Framework, CI/CD choices scored against CALMS + DORA.
 
 ## Table of Contents
 
