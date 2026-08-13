@@ -2,6 +2,8 @@
 
 Codex and Claude Code skills for making and recording infrastructure decisions — AWS choices scored against the Well-Architected Framework, CI/CD choices scored against CALMS + DORA.
 
+Current plugin version: **1.0.1** for both Codex and Claude Code.
+
 ## Table of Contents
 
 - [Skills](#skills)
