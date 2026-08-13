@@ -1,6 +1,6 @@
 # Architecture Decisions
 
-Codex and Claude Code skills for making and recording infrastructure decisions — AWS choices scored against the Well-Architected Framework, CI/CD choices scored against CALMS + DORA.
+Reusable skills for evaluating and documenting infrastructure and software delivery decisions using established architecture and DevOps frameworks.
 
 Current plugin version: **1.0.1** for both Codex and Claude Code.
 
