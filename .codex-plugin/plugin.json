@@ -1,0 +1,40 @@
+{
+  "name": "architecture-decisions",
+  "version": "1.0.0",
+  "description": "Decision skills for AWS infrastructure and CI/CD pipelines, each ending in a recorded decision.",
+  "author": {
+    "name": "Emmanuel Enalpe",
+    "url": "https://github.com/eenlpe1"
+  },
+  "homepage": "https://github.com/eenlpe1/architecture-decisions",
+  "repository": "https://github.com/eenlpe1/architecture-decisions",
+  "license": "MIT",
+  "keywords": [
+    "aws",
+    "well-architected",
+    "devops",
+    "ci-cd",
+    "calms",
+    "dora",
+    "infrastructure"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Architecture Decisions",
+    "shortDescription": "Make and record infrastructure and CI/CD decisions.",
+    "longDescription": "Evaluate AWS infrastructure choices against the Well-Architected Framework and CI/CD choices against CALMS and DORA, then record the decision and its accepted trade-offs.",
+    "developerName": "Emmanuel Enalpe",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Analysis",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/eenlpe1/architecture-decisions",
+    "defaultPrompt": [
+      "Compare two AWS architecture options.",
+      "Audit this AWS setup against all six pillars.",
+      "Audit and improve this CI/CD pipeline."
+    ],
+    "brandColor": "#FF9900"
+  }
+}

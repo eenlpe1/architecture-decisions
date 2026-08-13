@@ -7,6 +7,7 @@
     "url": "https://github.com/eenlpe1"
   },
   "repository": "https://github.com/eenlpe1/architecture-decisions",
+  "license": "MIT",
   "keywords": ["aws", "well-architected", "devops", "ci-cd", "calms", "dora", "infrastructure"],
   "skills": [
     "./skills/infra-decisions",

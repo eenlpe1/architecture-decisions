@@ -1,6 +1,6 @@
-# Architecture-Decisions
+# Architecture Decisions
 
-Claude Code skills for making and recording infrastructure decisions — AWS choices scored against the Well-Architected Framework, CI/CD choices scored against CALMS + DORA.
+Codex and Claude Code skills for making and recording infrastructure decisions — AWS choices scored against the Well-Architected Framework, CI/CD choices scored against CALMS + DORA.
 
 ## Table of Contents
 
@@ -11,6 +11,8 @@ Claude Code skills for making and recording infrastructure decisions — AWS cho
 - [Usage](#usage)
 - [Updating](#updating)
 - [Repository Structure](#repository-structure)
+- [Contributing](#contributing)
+- [License](#license)
 - [Publishing a Change](#publishing-a-change)
 
 ## Skills
@@ -39,9 +41,22 @@ Designs, audits, or optimizes a CI/CD pipeline using the CALMS framework — Cul
 
 ## Installation
 
+### Codex
+
+Requires Codex with plugin support. Add this GitHub repository as a marketplace, then install the plugin:
+
+```sh
+codex plugin marketplace add eenlpe1/architecture-decisions
+codex plugin add architecture-decisions@eenlpe1
+```
+
+Start a new Codex thread after installation so the skills are loaded.
+
+### Claude Code
+
 Requires [Claude Code](https://code.claude.com) with plugin support.
 
-```
+```text
 /plugin marketplace add eenlpe1/architecture-decisions
 /plugin install architecture-decisions@eenlpe1
 /reload-plugins
@@ -49,7 +64,7 @@ Requires [Claude Code](https://code.claude.com) with plugin support.
 
 ## Usage
 
-Both skills are model-invoked — Claude reaches for them automatically when a conversation matches their triggers (see the [Skills](#skills) table), no explicit call needed. You can also name one directly:
+Both skills are model-invoked — Codex or Claude reaches for them automatically when a conversation matches their triggers (see the [Skills](#skills) table). You can also name one directly; installed skills are namespaced by the plugin:
 
 ```
 architecture-decisions:infra-decisions
@@ -58,9 +73,16 @@ architecture-decisions:devops-decisions
 
 ## Updating
 
-To pull whatever's newest on `main`:
+For Codex, refresh the marketplace and reinstall the plugin, then start a new thread:
 
+```sh
+codex plugin marketplace upgrade eenlpe1
+codex plugin add architecture-decisions@eenlpe1
 ```
+
+For Claude Code:
+
+```text
 /plugin marketplace update eenlpe1
 /plugin install architecture-decisions@eenlpe1
 /reload-plugins
@@ -70,9 +92,15 @@ To pull whatever's newest on `main`:
 
 ```
 architecture-decisions/
+├── .codex-plugin/
+│   └── plugin.json        # Codex plugin metadata
 ├── .claude-plugin/
 │   ├── marketplace.json   # marketplace metadata (name: eenlpe1)
 │   └── plugin.json        # plugin metadata + skill list (name: architecture-decisions)
+├── marketplace.json       # Codex marketplace catalog
+├── AGENTS.md              # repository guidance for Codex
+├── CONTRIBUTING.md        # contribution workflow
+├── LICENSE                # MIT license
 ├── skills/
 │   ├── infra-decisions/
 │   │   ├── SKILL.md
@@ -84,9 +112,17 @@ architecture-decisions/
 └── README.md
 ```
 
+## Contributing
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the development, validation, and pull-request workflow.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ## Publishing a Change
 
 1. Edit the relevant skill file(s) under `skills/`.
-2. Bump `version` in [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json).
+2. Bump `version` in both [`.codex-plugin/plugin.json`](.codex-plugin/plugin.json) and [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json).
 3. Commit and push to `main`.
-4. Anywhere it's installed, run `/plugin marketplace update eenlpe1` then `/plugin install architecture-decisions@eenlpe1` to pull the new version.
+4. Refresh and reinstall the plugin using the relevant client's commands under [Updating](#updating).
